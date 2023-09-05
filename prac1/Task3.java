@@ -5,7 +5,7 @@ public class Task3 {
         System.out.println("Аргументы командной строки:");
 
         for (int i = 0; i < args.length; i++) {
-            System.out.println("Аргумент " + i + ": " + args[i]);
+            System.out.println("Аргумент " + (i + 1) + ": " + args[i]);
         }
     }
 }
