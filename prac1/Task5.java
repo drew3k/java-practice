@@ -1,5 +1,6 @@
 package prac1;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Task5 {
@@ -9,18 +10,18 @@ public class Task5 {
         System.out.print("Введите число для вычисления факториала: ");
         int n = scanner.nextInt();
 
-        long factorial = calculateFactorial(n);
+        BigInteger factorial = calculateFactorial(n);
 
         System.out.println("Факториал числа " + n + " = " + factorial);
     }
 
-    static long calculateFactorial(int n) {
+    static BigInteger calculateFactorial(int n) {
         if (n == 0 || n == 1) {
-            return 1;
+            return BigInteger.ONE;
         }
-        long result = 1;
+        BigInteger result = BigInteger.ONE;
         for (int i = 2; i <= n; i++) {
-            result *= i;
+            result = result.multiply(BigInteger.valueOf(i));
         }
         return result;
     }
